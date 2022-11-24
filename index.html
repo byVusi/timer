@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Timer</title>
+    <meta name="description" content="A simple timer">
+    <meta name="author" content="vusi mathonsi">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="module" src="js/main.js" defer></script>
+
+  </head>
+  <body>
+    <div class="user-input">
+      <label for="hours">H 
+      <input type="number" min="0" max="23" id="hours" value="" autofocus>
+      </label>
+      <label for="minutes">M 
+      <input type="number" min="0" max="59" id="minutes" value="">
+      </label>
+      <label for="seconds">S 
+      <input type="number" min="0" max="59" id="seconds" value="">
+      </label>
+    </div>
+    <div class="container">
+      <div class="clock">
+        <div class="hours">00</div>
+        <div class="minutes">00</div>
+        <div class="seconds">00</div>
+      </div>
+      <div class="buttons">
+        <button class="start-btn">Start</button>
+        <button class="clear-btn">Clear</button>
+      </div>
+    </div>
+  </body>
+</html>

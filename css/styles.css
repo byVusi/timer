@@ -1,0 +1,138 @@
+/* || General */
+
+:root {
+  --dark-primary: #222;
+  --dark-hover:#333;
+  --dark-active: #000;
+  --light: #f6f6f6;
+  --danger-primary: #DD2D4A;
+  --danger-hover: #c1253f;
+  --danger-active: #aa1d35;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font: 62.5%/1.5 Helvetica, Arial, sans-serif;
+}
+body {
+  height: 100vh;
+  font-size: 18px;
+  position: relative;
+}
+
+/* || Layout */
+
+.user-input,
+.clock, 
+label {
+  display: flex;
+}
+.user-input {
+  justify-content: space-around;
+}
+.clock {
+  justify-content: center;
+}
+label {
+  align-items: center;
+  gap: .5rem
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* || Spacing */
+
+.user-input {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2em;
+}
+label,
+.buttons {
+  text-align: center;
+}
+label {
+  margin-right: 1em;
+}
+input {
+  padding: .5em 1.6rem;
+}
+button {
+  padding: .5em 1em;
+  margin-block-start: 1em;
+  margin-inline-end: .5em;
+}
+
+/* || Typography */
+
+button {
+  font-size: inherit;
+}
+.clock {
+  font-family: "Space Mono", monospace;
+  font-size: 4.8rem;
+}
+
+/* || Colour */
+
+body {
+  background-color: var(--light);
+  color: var(--dark-primary);
+}
+button {
+  border: none;
+  border-radius: .5rem;
+}
+.start-btn:enabled {
+  background-color: var(--dark-primary);
+  color: var(--light)
+}
+.start-btn:enabled:hover {
+  background-color: var(--dark-hover);
+}
+.start-btn:enabled:active {
+  background-color: var(--dark-active);
+}
+.clear-btn {
+  background-color: transparent;
+  color: var(--dark-primary);
+  text-decoration: underline;
+}
+.clear-btn:hover {
+  text-decoration: none;
+}
+.clear-btn:active {
+  color: var(--dark-active);
+}
+.stop-btn {
+  background-color: var(--danger-primary);
+  color: var(--light)
+}
+.stop-btn:hover {
+  background-color: var(--danger-hover);
+}
+.stop-btn:active {
+  background-color: var(--danger-active);
+}
+
+/* || Graphics */
+
+.hours::after,
+.minutes::after {
+  content: ":"; 
+}
+button:enabled {
+  cursor: pointer;
+}
+button:enabled:active {
+  transform: scale(0.99);
+}
+
+/* || Media queries */
